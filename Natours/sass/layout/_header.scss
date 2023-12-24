@@ -1,0 +1,37 @@
+.header
+{
+    height: 95vh;/*to cover 90% of the viewport height*/
+    background-image: linear-gradient(
+        to right bottom, /*gradient path left to right by bottom*/
+         rgba($color-primary-light, 0.8),/*first gradient color with 0.8 opacity to view the background image*/
+         rgba($color-primary-dark, 0.8)),
+          url(../img/hero.jpg);/*background image*/
+    background-size:cover; /*background covers whole webpage*/
+    background-position: top; /*the top remain same eventhough the webpage size changes*/
+    position: relative; /*to make it as reference element (starting point for the logo-box to set its position */
+    /*use clippy web page to get different shapes coordinates*/
+    clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);/*to change the image coordnates to get the bottom cut args->(top-left,top-right,bottom-right,bottom-left) each as x,y*/
+    
+    &__logo-box
+    {
+        position: absolute;/*to give the top and bottom position*/
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo
+    {
+        height: 3.5rem;
+    }
+
+    &__text-box
+    {
+        position: absolute;
+        /*top and left are starting from the parent element*/
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%); /*to move the element exactly to center*/
+        text-align: center;/*to center the button*/
+    }
+
+}

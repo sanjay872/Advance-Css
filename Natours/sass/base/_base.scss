@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html
+{
+    font-size: 62.5%; /*changing the root font-size so 1rem = 10px = 62.5% of 16px which is the root font size */
+}
+
+body
+{
+    box-sizing: border-box;
+}

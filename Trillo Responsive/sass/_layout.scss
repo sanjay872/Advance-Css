@@ -1,0 +1,122 @@
+.container
+{
+    
+    max-width: 120em;
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-2);
+    box-shadow: var(--shadow-dark);
+
+    min-height: 50rem;
+
+    @media only screen and (max-width:$bp-largest)
+    {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+
+}
+
+.header
+{
+    height: 7rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+    border-bottom: var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    @media only screen and (max-width:$bp-small)
+    {
+        font-size: 1.8rem;
+        padding: 1.5rem 2rem;
+    }
+
+    @media only screen and (max-width:$bp-smallest)
+    {
+        flex-wrap: wrap;
+        align-content:space-around;
+        height: 12rem;
+    }
+}
+
+.content
+{
+    display: flex;
+
+    @media only screen and (max-width:$bp-medium)
+    {
+        flex-direction: column;
+    }
+}
+
+.sidebar
+{
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.detail
+{
+    display: flex;
+    font-size: 1.4rem;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    margin-bottom: var(--line);
+
+    
+    @media only screen and (max-width:$bp-medium)
+    {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width:$bp-small)
+    {
+        flex-direction: column;
+        padding: 1.5rem .5rem;
+    }
+
+}
+
+
+.hotel-view
+{
+    background-color: #fff;
+    flex: 1;
+}
+
+.user-reviews
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cta
+{
+    padding: 3.5rem 0;
+    text-align: center;
+
+
+    
+    @media only screen and (max-width:$bp-medium)
+    {
+        padding: 2.5rem 0;
+    }
+
+    &__book-now
+    {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+        text-transform: uppercase;
+    }
+
+
+}

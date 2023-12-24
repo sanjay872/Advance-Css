@@ -1,0 +1,71 @@
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html
+{
+    font-size: 62.5%; /*changing the root font-size so 1rem = 10px = 62.5% of 16px which is the root font size */
+
+
+    // @media (max-width:600px)
+    // {
+    //     font-size: 50%;
+    // }
+
+    // @include respond-phone
+    // {
+    //     font-size: 50%;
+    // }
+
+    //not required as the tab-port has same font-size
+    // @include respond(phone)
+    // {
+    //     font-size: 50%;
+    // }
+    
+    @include respond(tab-land) //width < 1200?
+    {
+        font-size: 56.25%; //1rem =9px 9/16=56.25%
+    }
+    
+    @include respond(tab-port) // width < 900?
+    {
+        font-size: 50%;  //1rem=8px 8/16=50%   
+    }
+    
+
+    @include respond(big-desktop) //1800px
+    {
+        font-size: 75%; //1rem =12px 12/16=75%
+    }
+
+}
+
+body
+{
+    box-sizing: border-box;
+    padding: 3rem !important;
+
+    @include respond(tab-port)
+    {
+        padding: 0 !important;
+    }
+}
+
+//to remove the overflowing white spacing on the right hand side of page when width < 600px
+html,body
+{
+    overflow-x: hidden;
+}
+
+//to customize text selection
+::selection
+{
+    background-color: $color-primary;
+    color: $color-white;
+}
